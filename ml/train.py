@@ -20,6 +20,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import shutil
 from datetime import UTC, datetime
 
 import joblib
@@ -280,6 +281,12 @@ def _update_index(task: str, version: str) -> None:
     index = json.loads(idx_path.read_text()) if idx_path.exists() else {}
     index[task] = version
     idx_path.write_text(json.dumps(index, indent=2))
+    # prune superseded versions for this task
+    task_dir = ARTIFACTS_DIR / task
+    if task_dir.is_dir():
+        for ver in task_dir.iterdir():
+            if ver.is_dir() and ver.name != version:
+                shutil.rmtree(ver, ignore_errors=True)
 
 
 # --------------------------------------------------------------------------- #
