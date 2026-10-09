@@ -1,8 +1,8 @@
 # MultiDx (`healtprediction_mp`)
 
 Multi-disease risk screening across 8 datasets (symptom differential + 7
-clinical risk tasks). Research-grade ML pipeline + (soon) FastAPI backend and
-React frontend.
+clinical risk tasks). Research-grade ML pipeline + FastAPI backend (Step 2 ✅)
++ React frontend (in progress).
 
 > ⚠️ Preliminary model-based indication. Not a medical diagnosis.
 
@@ -10,7 +10,7 @@ React frontend.
 
 ```
 ml/          training + evaluation + saved artifacts (Step 1 ✅)
-backend/     FastAPI service        (next)
+backend/     FastAPI service (Step 2 ✅)
 frontend/    React 18 + Vite + TS   (next)
 data/        raw + processed datasets (immutable, committed)
 legacy/      old Streamlit app + baseline trainer (reference only)
@@ -57,6 +57,37 @@ Design notes
   reported with a caveat, never advertised as performance.
 - macOS note: LightGBM needs `brew install libomp` once.
 
+## Backend API (`backend/`)
+
+```bash
+cd healtprediction_mp
+.venv/bin/pip install -r backend/requirements.txt
+.venv/bin/uvicorn backend.app.main:app --reload --port 8000
+```
+
+Interactive docs: <http://localhost:8000/docs>. Models are loaded once at
+startup from `MULTIDX_ARTIFACTS` (default `ml/artifacts`); run
+`.venv/bin/python -m ml.train --all` first if the index is missing.
+
+| Endpoint | Purpose |
+| --- | --- |
+| `GET /tasks` | all tasks + dynamic feature schemas (name, label, type, unit, min/max, default, group) |
+| `GET /tasks/{task}` | schema for one task |
+| `POST /predict/{task}` | single prediction (calibrated probability, risk level, top-3/5 SHAP, outlier warnings, model version) |
+| `POST /predict/{task}/batch` | CSV upload → annotated CSV (per-row validation errors) |
+| `GET /tasks/{task}/metrics` | held-out metrics, confusion matrix, ROC + calibration curves, CV results |
+| `GET /health` · `GET /version` | liveness + model versions |
+
+Environment: `API_RATE_LIMIT` (per-IP/minute, `0` disables), `API_CORS_ORIGINS`,
+`API_LOG_LEVEL`. Retraining is only exposed via the CLI (`python -m ml.train`),
+never through the API.
+
+```bash
+# backend tests + lint
+.venv/bin/python -m pytest backend/tests
+.venv/bin/ruff check backend ml
+```
+
 ## Env / deployment
 
-See `.env.example`. Backend + frontend + Docker/CI are in progress.
+See `.env.example`. Frontend + Docker/CI are in progress.

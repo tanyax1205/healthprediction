@@ -9,6 +9,7 @@ ignore = ["E501"]
 
 [tool.ruff.lint.per-file-ignores]
 "ml/tests/*" = ["B011"]
+"backend/app/api/**" = ["B008"]  # Depends()/File() in defaults is idiomatic FastAPI
 
 [tool.pytest.ini_options]
 testpaths = ["ml/tests"]
