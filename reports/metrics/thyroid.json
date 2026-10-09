@@ -1,0 +1,10 @@
+{
+  "task": "thyroid",
+  "kind": "binary",
+  "n_train": 2408,
+  "n_test": 603,
+  "n_features": 18,
+  "accuracy": 0.9867330016583747,
+  "roc_auc": 0.9946273291925466,
+  "f1": 0.8620689655172413
+}

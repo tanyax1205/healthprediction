@@ -1,0 +1,7 @@
+{
+  "n_raw_rows": 569,
+  "target_names": {
+    "1": "malignant",
+    "0": "benign"
+  }
+}

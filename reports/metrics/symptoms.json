@@ -1,0 +1,10 @@
+{
+  "task": "symptoms",
+  "kind": "multiclass",
+  "n_train": 243,
+  "n_test": 61,
+  "n_features": 131,
+  "accuracy": 1.0,
+  "f1_macro": 1.0,
+  "n_classes": 41
+}

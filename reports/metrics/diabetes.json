@@ -1,0 +1,10 @@
+{
+  "task": "diabetes",
+  "kind": "binary",
+  "n_train": 614,
+  "n_test": 154,
+  "n_features": 8,
+  "accuracy": 0.7467532467532467,
+  "roc_auc": 0.8255555555555556,
+  "f1": 0.6608695652173913
+}

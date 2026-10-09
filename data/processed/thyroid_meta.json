@@ -1,0 +1,32 @@
+{
+  "n_raw_rows": 3163,
+  "dropped_columns": [
+    "tsh_measured",
+    "t3_measured",
+    "tt4_measured",
+    "t4u_measured",
+    "fti_measured",
+    "tbg_measured",
+    "tbg"
+  ],
+  "kept": [
+    "age",
+    "sex",
+    "on_thyroxine",
+    "query_on_thyroxine",
+    "on_antithyroid_medication",
+    "thyroid_surgery",
+    "query_hypothyroid",
+    "query_hyperthyroid",
+    "pregnant",
+    "sick",
+    "tumor",
+    "lithium",
+    "goitre",
+    "tsh",
+    "t3",
+    "tt4",
+    "t4u",
+    "fti"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "n_raw_rows": 768,
+  "zero_as_missing": [
+    "glucose",
+    "blood_pressure",
+    "skin_thickness",
+    "insulin",
+    "bmi"
+  ],
+  "n_zero_cells_converted": 652
+}

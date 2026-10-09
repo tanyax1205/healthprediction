@@ -1,0 +1,10 @@
+{
+  "task": "cancer",
+  "kind": "binary",
+  "n_train": 455,
+  "n_test": 114,
+  "n_features": 30,
+  "accuracy": 0.9736842105263158,
+  "roc_auc": 0.9976851851851852,
+  "f1": 0.9629629629629629
+}

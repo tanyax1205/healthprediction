@@ -1,0 +1,44 @@
+{
+  "symptoms": {
+    "url": "https://www.kaggle.com/api/v1/datasets/download/itachi9604/disease-symptom-description-dataset",
+    "sha256": "327bd46217bbeeafc30c8b0e1670fff620205fd1f15df210cf607055d9493efd",
+    "bytes": 30775,
+    "downloaded_at": "2026-10-08T05:48:35.047546+00:00"
+  },
+  "heart": {
+    "url": "https://archive.ics.uci.edu/ml/machine-learning-databases/heart-disease/processed.cleveland.data",
+    "sha256": "a74b7efa387bc9d108d7d0115d831fe9b414b29ae7124f331b622b4efa0427c8",
+    "bytes": 18461,
+    "downloaded_at": "2026-10-08T05:47:30.767175+00:00"
+  },
+  "diabetes": {
+    "url": "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv",
+    "sha256": "6bfe5d0f379d17a0e0819b996407e3c09bf80febd4287f2ed212190dfff154af",
+    "bytes": 23278,
+    "downloaded_at": "2026-10-08T05:47:31.164119+00:00"
+  },
+  "liver": {
+    "url": "https://www.kaggle.com/api/v1/datasets/download/uciml/indian-liver-patient-records",
+    "sha256": "ae3ff2d86f811bf422e4994e082e8b8fe1f71171a106273df1f09a082431512a",
+    "bytes": 7865,
+    "downloaded_at": "2026-10-08T05:47:32.105481+00:00"
+  },
+  "ckd": {
+    "url": "https://archive.ics.uci.edu/ml/machine-learning-databases/00336/Chronic_Kidney_Disease.rar",
+    "sha256": "b7782fba71381f998f4478f088de06e0ae76b043024d7cd4ce1ae8b0578db165",
+    "bytes": 19260,
+    "downloaded_at": "2026-10-08T05:47:35.042163+00:00"
+  },
+  "stroke": {
+    "url": "https://www.kaggle.com/api/v1/datasets/download/fedesoriano/stroke-prediction-dataset",
+    "sha256": "83c150178a7a10439862a66b2703869aadc11f201c359436ae1df77d2b5e7485",
+    "bytes": 69007,
+    "downloaded_at": "2026-10-08T05:47:36.280520+00:00"
+  },
+  "thyroid": {
+    "url": "https://archive.ics.uci.edu/ml/machine-learning-databases/thyroid-disease/hypothyroid.data",
+    "sha256": "ffba466e9844cf7d6d8fde1f89209c6ab1d583c865abb449bb6ab8c70875f4c4",
+    "bytes": 219022,
+    "downloaded_at": "2026-10-08T05:47:57.612870+00:00"
+  }
+}

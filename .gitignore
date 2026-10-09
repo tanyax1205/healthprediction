@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Data / artifacts (regenerable; raw+processed data are committed intentionally)
+ml/artifacts/
+reports/*.csv
+reports/*.tex
+
+# Node / frontend
+node_modules/
+dist/
+.vite/
+coverage/
+playwright-report/
+test-results/
+
+# Env / OS / editors
+.env
+.env.local
+.DS_Store
+.idea/
+.vscode/

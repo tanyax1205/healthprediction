@@ -1,0 +1,5 @@
+{
+  "n_raw_rows": 399,
+  "source_arff": "chronic_kidney_disease.arff",
+  "n_invalid_rows_skipped": 1
+}

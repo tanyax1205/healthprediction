@@ -1,0 +1,15 @@
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = [".venv", "legacy", "node_modules"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"ml/tests/*" = ["B011"]
+
+[tool.pytest.ini_options]
+testpaths = ["ml/tests"]
+addopts = "-q"
