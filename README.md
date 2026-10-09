@@ -62,12 +62,16 @@ Design notes
 ```bash
 cd healtprediction_mp
 .venv/bin/pip install -r backend/requirements.txt
-.venv/bin/uvicorn backend.app.main:app --reload --port 8000
+make api            # or: .venv/bin/python -m backend.run --reload
 ```
 
-Interactive docs: <http://localhost:8000/docs>. Models are loaded once at
-startup from `MULTIDX_ARTIFACTS` (default `ml/artifacts`); run
+Interactive docs: <http://localhost:8000/docs>. The runner binds to
+`API_HOST`/`API_PORT` from `.env` (default `0.0.0.0:8000`, i.e. also reachable
+from other devices on your LAN). Models are loaded once at startup from
+`MULTIDX_ARTIFACTS` (default `ml/artifacts`); run
 `.venv/bin/python -m ml.train --all` first if the index is missing.
+
+Quick sanity check against a running server: `make smoke`.
 
 | Endpoint | Purpose |
 | --- | --- |
