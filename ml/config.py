@@ -17,7 +17,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 DATA_RAW = ROOT / "data" / "raw"
 DATA_PROCESSED = ROOT / "data" / "processed"
-ARTIFACTS_DIR = ROOT / "ml" / "artifacts"
+ARTIFACTS_DIR = Path(os.environ.get("MULTIDX_ARTIFACTS", ROOT / "ml" / "artifacts"))
 REPORTS_DIR = ROOT / "reports"
 
 for _d in (DATA_RAW, DATA_PROCESSED, ARTIFACTS_DIR, REPORTS_DIR):
